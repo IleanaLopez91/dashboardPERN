@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716047587366" clover="3.2.0">
-  <project timestamp="1716047587367" name="All files">
-    <metrics statements="95" coveredstatements="72" conditionals="5" coveredconditionals="3" methods="11" coveredmethods="9" elements="111" coveredelements="84" complexity="0" loc="95" ncloc="95" packages="5" files="6" classes="6"/>
+<coverage generated="1716048698429" clover="3.2.0">
+  <project timestamp="1716048698429" name="All files">
+    <metrics statements="95" coveredstatements="88" conditionals="5" coveredconditionals="5" methods="11" coveredmethods="11" elements="111" coveredelements="104" complexity="0" loc="95" ncloc="95" packages="5" files="6" classes="6"/>
     <package name="src">
       <metrics statements="30" coveredstatements="28" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="router.ts" path="A:\UDEMY\DashboardPERN\src\router.ts">
@@ -16,7 +16,7 @@
         <line num="25" count="2" type="stmt"/>
         <line num="33" count="4" type="stmt"/>
         <line num="39" count="2" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
         <line num="57" count="2" type="stmt"/>
         <line num="64" count="2" type="stmt"/>
         <line num="71" count="2" type="stmt"/>
@@ -53,9 +53,9 @@
       </file>
     </package>
     <package name="src.handlers">
-      <metrics statements="47" coveredstatements="26" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="4"/>
+      <metrics statements="47" coveredstatements="42" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
       <file name="product.ts" path="A:\UDEMY\DashboardPERN\src\handlers\product.ts">
-        <metrics statements="47" coveredstatements="26" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="4"/>
+        <metrics statements="47" coveredstatements="42" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
         <line num="3" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -63,12 +63,12 @@
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="19" count="4" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="22" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="31" count="2" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
@@ -76,24 +76,24 @@
         <line num="51" count="1" type="stmt"/>
         <line num="53" count="0" type="stmt"/>
         <line num="57" count="2" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="61" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="61" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
         <line num="72" count="2" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="75" count="0" type="stmt"/>
-        <line num="76" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="77" count="0" type="stmt"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="76" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
         <line num="83" count="0" type="stmt"/>
         <line num="87" count="2" type="stmt"/>
         <line num="88" count="2" type="stmt"/>
@@ -111,10 +111,10 @@
         <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="8" count="15" type="stmt"/>
-        <line num="9" count="15" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="17" type="stmt"/>
+        <line num="9" count="17" type="cond" truecount="1" falsecount="0"/>
         <line num="10" count="8" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
       </file>
     </package>

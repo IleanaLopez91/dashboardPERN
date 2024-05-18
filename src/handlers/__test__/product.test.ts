@@ -87,7 +87,7 @@ describe("GET /api/products", () => {
 describe("PUT /api/products", () => {
   it("should check a valid ID in the url", async () => {
     const response = await request(server)
-      .get(`/api/products/not-valid-url`)
+      .put(`/api/products/not-valid-url`)
       .send({
         name: "monitor-testing",
         price: 300,
@@ -129,7 +129,7 @@ describe("PUT /api/products", () => {
   it("should return a 404 response for a non-existent product", async () => {
     const productId = 2000;
     const response = await request(server)
-      .get(`/api/products/${productId}`)
+      .put(`/api/products/${productId}`)
       .send({
         name: "monitor-testing",
         price: 300,
@@ -142,7 +142,7 @@ describe("PUT /api/products", () => {
   });
 
   it("should update an existent product with valid data", async () => {
-    const response = await request(server).get(`/api/products/1`).send({
+    const response = await request(server).put(`/api/products/1`).send({
       name: "monitor-testing",
       price: 300,
       availability: true,
@@ -151,6 +151,27 @@ describe("PUT /api/products", () => {
     expect(response.body).toHaveProperty("data");
     expect(response.status).not.toBe(400);
     expect(response.body).not.toHaveProperty("errors");
+  });
+});
+
+describe("PATCH /api/products/:id", () => {
+  it("should return a 404 response for a non-existent product", async () => {
+    const productId = 2000;
+    const response = await request(server).patch(`/api/products/${productId}`);
+
+    expect(response.status).toBe(404);
+    expect(response.body).toHaveProperty("error");
+    expect(response.body.error).toBe("Producto no encontrado");
+    expect(response.status).not.toBe(200);
+    expect(response.body).not.toHaveProperty("data");
+  });
+  it("should update the product availability", async () => {
+    const response = await request(server).patch(`/api/products/1`);
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty("data");
+    expect(response.body.data.availability).toBe(false);
+    expect(response.status).not.toBe(400);
+    expect(response.body).not.toHaveProperty("error");
   });
 });
 
@@ -178,3 +199,4 @@ describe("DELETE /api/products/:id", () => {
     expect(response.status).not.toBe(404);
   });
 });
+
