@@ -9,7 +9,7 @@ async function connectDB() {
   try {
     await db.authenticate();
     db.sync();
-    console.log(colors.blue("Conexion exitosa a la BD"));
+    //console.log(colors.blue("Conexion exitosa a la BD"));
   } catch (error) {
     console.log(error);
     console.log(colors.red.bold("Hubo un error al conectar la BD"));
@@ -22,5 +22,7 @@ const server = express();
 server.use(express.json());
 
 server.use("/api/products", router);
-
+server.use("/api", (req, res) => {
+  res.json({ msj: "bienvenido" });
+});
 export default server;
