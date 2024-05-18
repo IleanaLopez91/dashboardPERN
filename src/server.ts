@@ -2,6 +2,8 @@ import express from "express";
 import router from "./router";
 import db from "./config/db";
 import colors from "colors";
+import swaggerUi from "swagger-ui-express";
+import swaggerSpec from "./config/swagger";
 
 //Conectar a la base de datos
 
@@ -22,7 +24,7 @@ const server = express();
 server.use(express.json());
 
 server.use("/api/products", router);
-server.use("/api", (req, res) => {
-  res.json({ msj: "bienvenido" });
-});
+
+server.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 export default server;

@@ -12,6 +12,51 @@ import hanleInputErrors from "./middleware";
 
 const router = Router();
 
+/**
+ * @swagger
+ * components:
+ *    schemas:
+ *      Product:
+ *        type: object
+ *        properties:
+ *          id:
+ *            type: integer
+ *            description: The Product ID
+ *            example: 1
+ *          name:
+ *            type: string
+ *            description: The Product name
+ *            example: Monitor curvo de 49 pulgadas
+ *          price:
+ *            type: number
+ *            description: The Product price
+ *            example: 300
+ *          availability:
+ *            type: boolean
+ *            description: The Product availability
+ *            example: true
+ */
+
+/**
+ * @swagger
+ * /api/products:
+ *      get:
+ *          summary: Get a list of product
+ *          tags:
+ *              - Products
+ *          description: Return a list of products
+ *          responses:
+ *              200:
+ *                  description: Successful response
+ *                  content:
+ *                      application/json:
+ *                          schema:
+ *                            type: array
+ *                            items:
+ *                              $ref: "#/components/schemas/Product"
+ *
+ */
+
 //Routing
 router.get("/", obtenerProductos);
 
