@@ -39,6 +39,17 @@ router.post(
 router.put(
   "/:id",
   param("id").isInt().withMessage("ID no valido"),
+  body("name").notEmpty().withMessage("El nombre no puede estar vacio"),
+  body("price")
+    .notEmpty()
+    .withMessage("El precio no puede estar vacio")
+    .isNumeric()
+    .withMessage("El precio debe ser un numero")
+    .custom((value) => value > 0)
+    .withMessage("El precio debe ser un numero positivo"),
+  body("availability")
+    .isBoolean()
+    .withMessage("Valor para disponibilidad no valido"),
   hanleInputErrors,
   updateProduct
 );
